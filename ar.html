@@ -1,0 +1,63 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>   
+
+       <script>
+        AFRAME.registerComponent('frequency', {
+            schema: {
+                delay: { type: 'number', default: 1000}
+            },
+            init: function () {
+                this.tick = AFRAME.utils.throttleTick(this.tick, this.data.delay, this);
+            },
+            tick: function (time, delta) {
+                console.log("TIME " + delta);
+            }
+        });
+
+    </script>
+</head>
+
+<body style='margin : 0px; overflow: hidden;'>
+
+    <a-scene arjs frequency="delay: 500">
+        <a-assets>
+            <a-asset-item id="stork" src="../assets/3Danims/birds/Stork.glb"></a-asset-item>
+            <a-asset-item id="fox" src="../assets/3Danims/fox/fox.glb"></a-asset-item>
+         <audio id="music" src="./assets/audio/birds.mp3" preload="auto" autoplay="true" volume="1"></audio>
+           
+        </a-assets>
+
+        
+	
+       <a-entity id="rotatingsphere" position="0 3 2"
+            animation="property: rotation; from: 0 360 0; to: 0 0 0; dur: 5000; loop: true; easing: linear">
+                    
+                <a-entity
+                    scale="0.5 0.5 0.5" position="0 0 -9" rotation="0 90 0" 
+                    animation-mixer
+                    gltf-model="#stork"
+                    shadow>
+                </a-entity>
+        </a-entity>
+<a-entity 
+position="0 0 -4.85" 
+rotation="0 60 0" 
+scale="0.01 0.01 0.01" 
+gltf-model="../assets/3Danims/fox/fox.glb" 
+animation-mixer="clip: Run" 
+shadow>
+        </a-entity>
+        <a-entity light="color: #f9e18b; intensity: 2; decay: 10; castShadow:true" position="0.23 -0.45 1"></a-entity>
+
+
+    </a-scene>
+</body>
+
+</html>

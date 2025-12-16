@@ -1,0 +1,106 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@c-frame/aframe-physics-system@4.2.3/dist/aframe-physics-system.min.js"></script>
+  </head>
+  <body>
+    <a-scene physics>
+
+      <!-- Déclaration de tous les assets -->
+      <a-assets>
+        <!-- Textures -->
+        <img id="mur" src="./assets/img/mur.jpg" />
+        <img id="sol" src="./assets/img/parquet.jpg" />
+        <img id="plafond" src="./assets/img/plafond.jpg" />
+
+        <!-- Modèles 3D -->
+        <a-asset-item id="easel" src="./assets/3Dmodels/easel.glb"></a-asset-item>
+        <a-asset-item id="bookshelf" src="./assets/3Dmodels/bookshelf.glb"></a-asset-item>
+        <a-asset-item id="coffee-table" src="./assets/3Dmodels/coffee_table.glb"></a-asset-item>
+        <a-asset-item id="bookstack" src="./assets/3Dmodels/book_stack.glb"></a-asset-item>
+        <a-asset-item id="candle" src="./assets/3Dmodels/candle.glb"></a-asset-item>
+        <a-asset-item id="curtains" src="./assets/3Dmodels/curtains.glb"></a-asset-item>
+        <a-asset-item id="radiator" src="./assets/3Dmodels/radiator.glb"></a-asset-item>
+        <a-asset-item id="table" src="./assets/3Dmodels/table.glb"></a-asset-item>
+        <a-asset-item id="house_palm_plant" src="./assets/3Dmodels/house_palm_plant.glb"></a-asset-item>
+        <a-asset-item id="golden_lamp" src="./assets/3Dmodels/golden_lamp.glb"></a-asset-item>
+        <a-asset-item id="ceiling_fan" src="./assets/3Dmodels/ceiling_fan.glb"></a-asset-item>
+        <a-asset-item id="vintage_grandfather_clock" src="./assets/3Dmodels/vintage_grandfather_clock.glb"></a-asset-item>
+        <a-asset-item id="brushes" src="./assets/3Dmodels/brushes.glb"></a-asset-item>
+        <a-asset-item id="paint_can_1" src="./assets/3Dmodels/paint_can_1.glb"></a-asset-item>
+        <a-asset-item id="paint_can" src="./assets/3Dmodels/paint_can.glb"></a-asset-item>
+        <a-asset-item id="pencil_holder" src="./assets/3Dmodels/pencil_holder.glb"></a-asset-item>
+        <a-asset-item id="rusty_canister_and_thermos" src="./assets/3Dmodels/rusty_canister_and_thermos.glb"></a-asset-item>
+        <a-asset-item id="books" src="./assets/3Dmodels/books.glb"></a-asset-item>
+        <a-asset-item id="blank_canvas" src="./assets/3Dmodels/blank_canvas.glb"></a-asset-item>
+        <a-asset-item id="cupboard" src="./assets/3Dmodels/cupboard.glb"></a-asset-item>
+        <a-asset-item id="cardboard_box" src="./assets/3Dmodels/cardboard_box.glb"></a-asset-item>
+        <a-asset-item id="cardboard_box_1" src="./assets/3Dmodels/cardboard_box_1.glb"></a-asset-item>
+        <a-asset-item id="cardboard_box_prop" src="./assets/3Dmodels/cardboard_box_prop.glb"></a-asset-item>
+        <a-asset-item id="clean_paint_brush" src="./assets/3Dmodels/clean_paint_brush.glb"></a-asset-item>
+        <a-asset-item id="low_poly_paint_brush" src="./assets/3Dmodels/low_poly_paint_brush.glb"></a-asset-item>
+        <a-asset-item id="oil_painters_kit" src="./assets/3Dmodels/oil_painters_kit.glb"></a-asset-item>
+        <a-asset-item id="paintbrush" src="./assets/3Dmodels/paintbrush.glb"></a-asset-item>
+        <a-asset-item id="persian_rug" src="./assets/3Dmodels/persian_rug.glb"></a-asset-item>
+        <a-asset-item id="russian_kilim" src="./assets/3Dmodels/russian_kilim.glb"></a-asset-item>
+        <a-asset-item id="rusty_filing_cabinet" src="./assets/3Dmodels/rusty_filing_cabinet.glb"></a-asset-item>
+        <a-asset-item id="simple_bookstack" src="./assets/3Dmodels/simple_bookstack.glb"></a-asset-item>
+        <a-asset-item id="simple_roller" src="./assets/3Dmodels/simple_roller.glb"></a-asset-item>
+        <a-asset-item id="vintage_metal_ashtray" src="./assets/3Dmodels/vintage_metal_ashtray.glb"></a-asset-item>
+        <a-asset-item id="works" src="./assets/3Dmodels/works.glb"></a-asset-item>
+      </a-assets>
+
+      <!-- Groupe de tous les objets -->
+      <a-entity position="0 0 3">
+        <a-entity gltf-model="#easel" position="-0.403 0 -4.097" scale="0.035 0.035 0.035" rotation="0 45 0"></a-entity>
+        <a-entity gltf-model="#bookshelf" position="1.5 0 -5.5" scale="0.9 0.8 0.9" rotation="0 180 0"></a-entity>
+        <a-entity gltf-model="#coffee-table" position="-1.22 0 -5.15" scale="0.08 0.08 0.08" rotation="0 180 0"></a-entity>
+       <a-entity gltf-model="#curtains" position="0.12 1 -4.8" scale="0.006 0.006 0.006"></a-entity>
+        <a-entity gltf-model="#table" position="0 0 -5.18" scale="0.15 0.15 0.15"></a-entity>
+        <a-entity gltf-model="#candle" position="0.56 0.73 -5.02" scale="0.01 0.01 0.01" rotation="0 -50 0"></a-entity>
+        <a-entity gltf-model="#radiator" position="-1.63 0 -1.12" rotation="0 180 0"></a-entity>
+        <a-entity gltf-model="#bookstack" position="-1.2 0.8 -5.2" rotation="0 180 0" scale="0.15 0.15 0.15"></a-entity>
+        <a-entity gltf-model="#house_palm_plant" position="-1.2 0.9 -5.16" rotation="0 180 0"></a-entity>
+        <a-entity gltf-model="#golden_lamp" position="0.37 0.98 -5.23" scale="0.5 0.5 0.5"></a-entity>
+        <a-entity gltf-model="#ceiling_fan" position="0.08 2.27 -3.84" scale="0.02 0.02 0.02"></a-entity>
+        <a-entity gltf-model="#vintage_grandfather_clock" position="1.3 0 -2.79" rotation="0 -90 0"></a-entity>
+        <a-entity gltf-model="#brushes" position="-0.1 0.73 -5.23" rotation="0 180 0"></a-entity>
+        <a-entity gltf-model="#paint_can_1" position="-0.01 0 -4.36" rotation="0 -90 0" scale="0.003 0.003 0.003"></a-entity>
+        <a-entity gltf-model="#paint_can" position="0.18 0 -4.26" rotation="0 30 0" scale="0.03 0.03 0.03"></a-entity>
+        <a-entity gltf-model="#pencil_holder" position="-0.32 0.73 -5.3"></a-entity>
+        <a-entity gltf-model="#rusty_canister_and_thermos" position="-0.16 1 -5" scale="0.05 0.05 0.05" rotation="0 -20 0"></a-entity>
+        <a-entity gltf-model="#books" position="0.81 0.06 -5" scale="0.3 0.3 0.3" rotation="0 -20 0"></a-entity>
+        <a-entity gltf-model="#blank_canvas" position="-0.36 0.53 -3.94" scale="0.8 0.8 0.8" rotation="-10 45 0"></a-entity>
+        <a-entity gltf-model="#cupboard" position="0 -0.03 -2.7" scale="0.7 0.7 0.7" rotation="0 180 0"></a-entity>
+        <a-entity gltf-model="#cardboard_box" position="-0.8 0.148 -3.66" scale="0.7 0.7 0.7" rotation="0 20 0"></a-entity>
+        <a-entity gltf-model="#cardboard_box_1" position="-0.9 0.15 -3" scale="0.005 0.005 0.005" rotation="0 43 0"></a-entity>
+        <a-entity gltf-model="#cardboard_box_prop" position="-0.9 0.5 -3.35" scale="0.3 0.3 0.3" rotation="0 65 0"></a-entity>
+        <a-entity gltf-model="#clean_paint_brush" position="-0.07 0 -3.96" scale="0.03 0.03 0.03" rotation="90 17 90"></a-entity>
+        <a-entity gltf-model="#low_poly_paint_brush" position="0.06 -0 -4.1" scale="0.01 0.01 0.01" rotation="0 68 0"></a-entity>
+        <a-entity gltf-model="#oil_painters_kit" position="-0.57 0.27 -3.67" scale="0.02 0.02 0.02" rotation="0 68 0"></a-entity>
+        <a-entity gltf-model="#paintbrush" position="0.2 0.74 -5" rotation="90 230 0"></a-entity>
+        <a-entity gltf-model="#persian_rug" position="-0.29 0.01 -4.03" rotation="0 38 0" scale="0.5 0.5 0.5"></a-entity>
+        <a-entity gltf-model="#russian_kilim" position="0.53 0 -3.06" rotation="0 68 0" scale="0.5 0.5 0.5"></a-entity>
+       <a-entity gltf-model="#rusty_filing_cabinet" position="0.85 0.44656 -3.26" rotation="0 -110 0" scale="0.005 0.005 0.005"></a-entity>
+        <a-entity gltf-model="#simple_bookstack" position="0.85 0 -3.62" rotation="0 12 0" scale="0.08 0.08 0.08"></a-entity>
+        <a-entity gltf-model="#simple_roller" position="0.72 0.55 -3.27" rotation="-90 12 0"></a-entity>
+        <a-entity gltf-model="#vintage_metal_ashtray" position="0.4 0.73 -5" rotation="0 12 0"></a-entity>
+      </a-entity>
+
+      <!-- Lumières -->
+     <a-entity light="color: #e8dcb0; decay: 2.2; distance: 3.79; intensity: 2; type: point; shadowBias: 10" position="0 2 -0.7"></a-entity>
+      <a-entity light="color: #d6c380; decay: 2.59; distance: 0.56; intensity: 0.7; type: point; shadowBias: 10" position="0.35 1 -2.1"></a-entity>
+     <a-entity light="color: #e6ca65; decay: 2.59; distance: 0.2; intensity: 4; type: point; shadowBias: 10" position="0.42 1.05 -1.73"></a-entity>
+      <!-- Murs, sol, plafond -->
+      <a-plane static-body="sphereRadius: NaN" position="0 0 -1" rotation="-90 0 0" width="3" height="3" src="#sol" material="side: double" velocity=""></a-plane>
+      <a-plane src="#plafond" material="side: double" position="0 2.75 -1.00042" width="3" height="3" rotation="90 0 0"></a-plane>
+      <a-plane src="#mur" material="side: double" position="0 1.25 -2.5" width="3" height="3"></a-plane>
+  <a-plane src="#mur" material="side: double" position="1.50539 1.4 -1" width="3" height="3" rotation="0 90 0" scale="1 0.91 1"></a-plane>
+      <a-plane src="#mur" material="side: double" position="0 1.4 0.48821" width="3" height="3" scale="1 0.92 1"></a-plane>
+      <a-plane src="#mur" material="side: double" position="-1.5 1.4 -1" width="3" height="3" rotation="0 90 0" scale="1 0.91 1"></a-plane>
+
+      <a-sky color="#121212"></a-sky>
+
+    </a-scene>
+  </body>
+</html>
